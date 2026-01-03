@@ -7,4 +7,9 @@ language.
 
 ### Concepts covered in this application:
 - Printing strings
-- Reading user input from console and printing it
+- Reading user input using "Scanner"
+- Variables
+- String concatenation
+- Conditional statements
+- Getting date using "LocalDate"
+- Arithmetic operators (+, -, %, /)
