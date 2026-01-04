@@ -63,5 +63,21 @@ public class BasicApp {
             int userAge = currentYear % birthYear;
             System.out.println("You are currently " + (userAge - 1) + "/" + userAge + " years old\n");
         }
+
+        // Ask user a true or false question
+
+        // Print question with choice options
+        System.out.println("Please enter: True OR False:\n" +
+                "There are 8 planets in the Solar System...\n" +
+                "========\n" +
+                "|Options:\n" +
+                "========\n" +
+                "-TRUE/true = true\n" +
+                "-FALSE/false/anything else = false\n");
+
+        Boolean boolChoice = Boolean.valueOf(scanner.nextLine());
+
+        System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System" : "Incorrect, there truly are 8 planets in our Solar System");
+
     }
 }
