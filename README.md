@@ -8,8 +8,17 @@ language.
 ### Concepts covered in this application:
 - Printing strings
 - Reading user input using "Scanner"
-- Variables
+- Variables (int, string, double, boolean)
 - String concatenation
 - Conditional statements
 - Getting date using "LocalDate"
 - Arithmetic operators (+, -, %, /)
+- Logical operators (ternary (? a:b))
+- String --> int, double, boolean - conversions
+
+### Important concepts learned
+- Using nextInt leaves a newline in the buffer. This causes the subsequent
+nextLine call to consume the newline and nothing else resulting in an empty
+string
+- Integer.valueOf returns an Integer wrapper object whereas Integer.parseInt
+returns a primitive int value
