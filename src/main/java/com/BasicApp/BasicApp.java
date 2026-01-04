@@ -37,7 +37,7 @@ public class BasicApp {
 
         //  Get users birth year to calculate current age
         System.out.println(userName + " please enter your birth year:");
-        int birthYear = scanner.nextInt();
+        int birthYear = Integer.valueOf(scanner.nextLine()); // *using nextInt leaves \n in buffer*
 
         // Create LocalDate object to get current year
         LocalDate currentDate = LocalDate.now();
@@ -61,7 +61,7 @@ public class BasicApp {
             // Calculate and print user's age
             // use modulo operator to get age
             int userAge = currentYear % birthYear;
-            System.out.println("You are currently " + (userAge - 1) + "/" + userAge + " years old");
+            System.out.println("You are currently " + (userAge - 1) + "/" + userAge + " years old\n");
         }
     }
 }
