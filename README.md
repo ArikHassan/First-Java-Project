@@ -20,5 +20,9 @@ language.
 - Using nextInt leaves a newline in the buffer. This causes the subsequent
 nextLine call to consume the newline and nothing else resulting in an empty
 string
+
 - Integer.valueOf returns an Integer wrapper object whereas Integer.parseInt
 returns a primitive int value
+
+- Using println includes a newline character whereas printf does not and can be
+used for formatting output text
