@@ -77,7 +77,19 @@ public class BasicApp {
 
         Boolean boolChoice = Boolean.valueOf(scanner.nextLine());
 
-        System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System" : "Incorrect, there truly are 8 planets in our Solar System");
+        System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System" : "Incorrect, there truly are 8 planets in our Solar System\n");
+
+        // Ask user for 2 numbers to sum
+
+        System.out.println("Please enter 2 numbers to get the sum:");
+        System.out.printf("Num 1: ");
+        int num1 = Integer.valueOf(scanner.nextLine());
+        System.out.printf("Num 2: ");
+        int num2 = Integer.valueOf(scanner.nextLine());
+
+        // print the sum
+        // System.out.println("The sum of the numbers is " + num1 + num2); // must use parentheses for the addition expression
+        System.out.println("The sum of the numbers is " + (num1 + num2));
 
     }
 }
