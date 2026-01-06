@@ -73,11 +73,11 @@ public class BasicApp {
                 "|Options:\n" +
                 "========\n" +
                 "-TRUE/true = true\n" +
-                "-FALSE/false/anything else = false\n");
+                "-FALSE/false/anything else = false");
 
         Boolean boolChoice = Boolean.valueOf(scanner.nextLine());
 
-        System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System" : "Incorrect, there truly are 8 planets in our Solar System\n");
+        System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System\n" : "Incorrect, there truly are 8 planets in our Solar System\n");
 
         // Ask user for 2 numbers to sum
 
@@ -89,7 +89,23 @@ public class BasicApp {
 
         // print the sum
         // System.out.println("The sum of the numbers is " + num1 + num2); // must use parentheses for the addition expression
-        System.out.println("The sum of the numbers is " + (num1 + num2));
+        System.out.println("The sum of the numbers is " + (num1 + num2) + "\n");
+
+
+        // Prompt for 2 strings to compare using string.equals()
+        System.out.println("Lets compare 2 strings with each other. Note: comparison is case sensitive.");
+
+        System.out.printf("Enter string 1: ");
+        String str1 = scanner.nextLine();
+
+        System.out.printf("Enter string 2: ");
+        String str2 = scanner.nextLine();
+
+        if (str1.equals(str2)){
+            System.out.println("The strings are the same!\n");
+        } else {
+            System.out.println("The strings are NOT the same!\n");
+        }
 
     }
 }
