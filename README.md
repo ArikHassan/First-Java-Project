@@ -17,6 +17,7 @@ some input and generates varying responses based on that input.
 - Arithmetic operators (+, -, %, /)
 - Logical operators (ternary (? a:b))
 - String --> int, double, boolean - conversions
+- String comparison
 
 ### Important concepts learned
 - Using nextInt leaves a newline in the buffer. This causes the subsequent
@@ -28,3 +29,5 @@ returns a primitive int value
 
 - Using println includes a newline character whereas printf does not and can be
 used for formatting output text
+
+- Strings can be compared using string.equals(str) method
