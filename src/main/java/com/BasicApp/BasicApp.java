@@ -107,5 +107,11 @@ public class BasicApp {
             System.out.println("The strings are NOT the same!\n");
         }
 
+        // Get a number from user and then print its square root
+        System.out.println("Lets square a number.");
+        System.out.printf("Enter number: ");
+        int numToSquare = Integer.valueOf(scanner.nextLine());
+        double squareRoot = Math.sqrt(numToSquare);
+        System.out.println("The square root of " + numToSquare + " is " + squareRoot);
     }
 }

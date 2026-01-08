@@ -27,8 +27,8 @@ string
 - Integer.valueOf returns an Integer wrapper object whereas Integer.parseInt
 returns a primitive int value
 
-- Using println includes a newline character whereas printf does not and can be
-used for formatting output text
+- Using println includes a newline character whereas printf() & print() do not. printf()
+is used to format output.
 
 - Strings can be compared using string.equals(str) method
 
