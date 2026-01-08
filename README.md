@@ -31,3 +31,8 @@ returns a primitive int value
 used for formatting output text
 
 - Strings can be compared using string.equals(str) method
+
+### Conclusion
+The purpose of this application is to get familiar with the fundamentals of
+Java syntax. I feel confident that this is a good starting point, though
+there is still much more to learn! Happy coding!
