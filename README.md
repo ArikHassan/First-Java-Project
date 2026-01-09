@@ -18,6 +18,8 @@ some input and generates varying responses based on that input.
 - Logical operators (ternary (? a:b))
 - String --> int, double, boolean - conversions
 - String comparison
+- Random Class (random value generation)
+- Math Class constants & methods
 
 ### Important concepts learned
 - Using nextInt leaves a newline in the buffer. This causes the subsequent

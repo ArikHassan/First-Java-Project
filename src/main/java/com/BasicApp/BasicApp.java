@@ -8,7 +8,7 @@ will be errors in the package statement on line 1.
 
 // Scanner --> Scanner object built into Java to read user input
 import java.util.Scanner;
-
+import java.util.Random;
 // LocalDate --> object to get the systems local date/time info
 import java.time.LocalDate;
 
@@ -18,6 +18,9 @@ public class BasicApp {
         // Header message
         System.out.println("Basic App - This is a beginner level Java Application.");
         System.out.println("------------------------------------------------------");
+
+//====================================================================================
+// User input using Scanner Class Obj
 
         // Create Scanner object to read user input
         Scanner scanner = new Scanner(System.in);
@@ -34,6 +37,9 @@ public class BasicApp {
         System.out.println("\nGreetings " + userName + " and welcome to this Java application. Please read the\n" +
                 "documentation in the projects' README.md file to get in-depth details\n" +
                 "about this program.\n");
+
+//====================================================================================
+// Conditional Logic
 
         //  Get users birth year to calculate current age
         System.out.println(userName + " please enter your birth year:");
@@ -64,6 +70,8 @@ public class BasicApp {
             System.out.println("You are currently " + (userAge - 1) + "/" + userAge + " years old\n");
         }
 
+//====================================================================================
+// Ternary Operator
         // Ask user a true or false question
 
         // Print question with choice options
@@ -79,8 +87,10 @@ public class BasicApp {
 
         System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System\n" : "Incorrect, there truly are 8 planets in our Solar System\n");
 
-        // Ask user for 2 numbers to sum
+//====================================================================================
+// Sum calculation
 
+        // Ask user for 2 numbers to sum
         System.out.println("Please enter 2 numbers to get the sum:");
         System.out.printf("Num 1: ");
         int num1 = Integer.valueOf(scanner.nextLine());
@@ -91,7 +101,8 @@ public class BasicApp {
         // System.out.println("The sum of the numbers is " + num1 + num2); // must use parentheses for the addition expression
         System.out.println("The sum of the numbers is " + (num1 + num2) + "\n");
 
-
+//====================================================================================
+// String comparison
         // Prompt for 2 strings to compare using string.equals()
         System.out.println("Lets compare 2 strings with each other. Note: comparison is case sensitive.");
 
@@ -107,11 +118,83 @@ public class BasicApp {
             System.out.println("The strings are NOT the same!\n");
         }
 
-        // Get a number from user and then print its square root
-        System.out.println("Lets square a number.");
-        System.out.printf("Enter number: ");
-        int numToSquare = Integer.valueOf(scanner.nextLine());
-        double squareRoot = Math.sqrt(numToSquare);
-        System.out.println("The square root of " + numToSquare + " is " + squareRoot);
+//====================================================================================
+// Generate random values using Java's random class
+        // (import Random object at top of file)
+
+        System.out.println("Lets generate some random numbers");
+
+        // Declare and init a new random object
+        Random random = new Random();
+
+        // declare & assign variables with random numbers
+        int randomNum1 = random.nextInt(); // generates random number with no bounds/limits
+        int randomNum2 = random.nextInt(10,101); // random number BETWEEN param1(inclusive) and param2(exclusive) param1 >= && < param2
+
+        // try with type double, using nextDouble()
+        double randomNum3 = random.nextDouble(1, 1001);
+
+        // try with type boolean
+        boolean randomBool = random.nextBoolean();
+
+        // Print the generated random number
+        System.out.print("randomNum1: " + randomNum1 + "\n");
+        System.out.print("randomNum2: " + randomNum2 + "\n");
+        System.out.print("randomNum3: " + randomNum3 + "\n");
+
+        System.out.print("\nHeads or tails? --> ");
+        System.out.println(randomBool ? "Heads" : "Tails" + "\n");
+
+//====================================================================================
+// Math constants + Methods
+
+        System.out.println("Mathematical constants & methods in Java:\n");
+
+        // Built in CONST for pi
+        System.out.println("The value of PI is " + Math.PI);
+
+        // Built in CONST for E (Eulers number / exponential constant)
+        System.out.println("The Exponential Constant / Eulers number is " + Math.E + "\n");
+
+        // Raise a base to a power using pow()
+        double powerResult = Math.pow(5, 4);
+        System.out.println("Raising to power using .pow()");
+        System.out.println("5 to the power of 4 = " + powerResult + "\n");
+
+        // Get absolute value of a given value using Math.abs()
+        int absVal1 = -7;
+        int absVal2 = 50;
+
+        System.out.println("Absolute values using .abs()");
+        System.out.println("Absolute value of " + absVal1 + " is " + Math.abs(absVal1));
+        System.out.println("Absolute value of " + absVal2 + " is " + Math.abs(absVal2) + "\n");
+
+        // get Square Root of a number using Math.sqrt()
+        int squaredNum = 25;
+        double squareRoot = Math.sqrt(squaredNum);
+        System.out.println("Square root using .sqrt()");
+        System.out.println("The square root of " + squaredNum + " is " + squareRoot + "\n");
+
+        // Rounding numbers using Math.round()
+        double roundNum1 = 2.5;
+        double roundNum2 = 3.7;
+        double roundNum3 = 4.49;
+
+        System.out.println("Rounding numbers using .round()");
+        System.out.println(roundNum1 + " rounds to " + Math.round(roundNum1));
+        System.out.println(roundNum2 + " rounds to " + Math.round(roundNum2));
+        System.out.println(roundNum3 + " rounds to " + Math.round(roundNum3) + "\n");
+
+        // Forced rounding using Math.ceil & Math.floor
+        System.out.println("Force rounding using .ceil() & .floor()");
+        System.out.println(roundNum3 + " rounds UP to " + Math.ceil(roundNum3));
+        System.out.println(roundNum2 + " rounds DOWN to " + Math.floor(roundNum2));
+
+        // Get MAX & MIN between 2 values using .max & .min
+        System.out.println("Get MAX & MIN values from a range using .max() & .min()");
+        System.out.println("The MAX between 50 & 100 is " + Math.max(50, 100));
+        System.out.println("The MIN between 50 & 100 is " + Math.max(50, 100));
+
+
     }
 }
