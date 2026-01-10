@@ -4,9 +4,6 @@ I'm super excited to document my journey to becoming an expert in using Java to 
 language. In this small project I have built a Command Line app that prompts the user for
 some input and generates varying responses based on that input.
 
-## Project Description
-
-
 ### Concepts covered in this application:
 - Printing strings
 - Reading user input using "Scanner"
@@ -15,7 +12,8 @@ some input and generates varying responses based on that input.
 - Conditional statements
 - Getting date using "LocalDate"
 - Arithmetic operators (+, -, %, /)
-- Logical operators (ternary (? a:b))
+- Logical operators (ternary (? a:b), &&, ||, !)
+- Comparison operators >, <, >=, <=, ==
 - String --> int, double, boolean - conversions
 - String comparison
 - Random Class (random value generation)

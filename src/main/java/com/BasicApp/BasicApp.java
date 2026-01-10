@@ -91,11 +91,15 @@ public class BasicApp {
 // Sum calculation
 
         // Ask user for 2 numbers to sum
-        System.out.println("Please enter 2 numbers to get the sum:");
-        System.out.printf("Num 1: ");
-        int num1 = Integer.valueOf(scanner.nextLine());
-        System.out.printf("Num 2: ");
-        int num2 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Let's calculate the sum of 2 numbers.");
+
+        // Declare number variables
+        int num1 = 26;
+        int num2 = 4;
+
+        // print number values
+        System.out.println("Num 1: " + num1);
+        System.out.println("Num 2: " + num2);
 
         // print the sum
         // System.out.println("The sum of the numbers is " + num1 + num2); // must use parentheses for the addition expression
@@ -106,13 +110,15 @@ public class BasicApp {
         // Prompt for 2 strings to compare using string.equals()
         System.out.println("Lets compare 2 strings with each other. Note: comparison is case sensitive.");
 
-        System.out.printf("Enter string 1: ");
-        String str1 = scanner.nextLine();
+        // declare string variables
+        String string1 = "Beach Hut";
+        String string2 = "BEACH HUT";
 
-        System.out.printf("Enter string 2: ");
-        String str2 = scanner.nextLine();
+        // Print string values
+        System.out.printf("string 1: " + string1);
+        System.out.printf("string 2: " + string2);
 
-        if (str1.equals(str2)){
+        if (string1.equals(string2)){
             System.out.println("The strings are the same!\n");
         } else {
             System.out.println("The strings are NOT the same!\n");
@@ -195,6 +201,25 @@ public class BasicApp {
         System.out.println("The MAX between 50 & 100 is " + Math.max(50, 100));
         System.out.println("The MIN between 50 & 100 is " + Math.max(50, 100));
 
+//====================================================================================
+// Enhanced switch statements --> better alternative to multiple else if statements
 
+        String month  = "January";
+        //String monthSeason = "Unknown";
+
+        switch(month) {
+            case "January" -> System.out.println("It is a WINTER month");
+            case "February" -> System.out.println("It is a WINTER month");
+            case "March" -> System.out.println("It is a SPRING month");
+            case "April" -> System.out.println("It is a SPRING month");
+            case "May" -> System.out.println("It is a SPRING month");
+            case "June" -> System.out.println("It is a SUMMER month");
+            case "July" -> System.out.println("It is a SUMMER month");
+            case "August" -> System.out.println("It is a SUMMER month");
+            case "September" -> System.out.println("It is a FALL month");
+            case "October" -> System.out.println("It is a FALL month");
+            case "November" -> System.out.println("It is a FALL month");
+            case "December" -> System.out.println("It is a WINTER month");
+        }
     }
 }
