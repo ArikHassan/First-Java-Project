@@ -18,12 +18,17 @@ public class BasicApp {
         // Header message
         System.out.println("Basic App - This is a beginner level Java Application.");
         System.out.println("------------------------------------------------------");
-
 //====================================================================================
-// User input using Scanner Class Obj
+// Declare built-in objects to be used
+
+        // Create Random object to generate random values
+        Random random = new Random();
 
         // Create Scanner object to read user input
         Scanner scanner = new Scanner(System.in);
+
+//====================================================================================
+// User input using Scanner Class Obj
 
         // Prompt user for input (name)
         System.out.println("Please enter your Username / Full Name:");
@@ -72,18 +77,18 @@ public class BasicApp {
 
 //====================================================================================
 // Ternary Operator
-        // Ask user a true or false question
 
         // Print question with choice options
-        System.out.println("Please enter: True OR False:\n" +
-                "There are 8 planets in the Solar System...\n" +
-                "========\n" +
-                "|Options:\n" +
-                "========\n" +
-                "-TRUE/true = true\n" +
-                "-FALSE/false/anything else = false");
+        System.out.println("True OR False?\n" +
+                "There are 8 planets in the Solar System...\n\n" +
+                "(System will generate random TRUE/FALSE value))\n");
+        //( Java evaluates true/TRUE as true & false/FALSE/anything else as false)
 
-        Boolean boolChoice = Boolean.valueOf(scanner.nextLine());
+        // generate random boolean value
+        Boolean boolChoice = random.nextBoolean();
+
+        // print generated value
+        System.out.println("Generated T/F Value: " + boolChoice);
 
         System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System\n" : "Incorrect, there truly are 8 planets in our Solar System\n");
 
@@ -115,8 +120,8 @@ public class BasicApp {
         String string2 = "BEACH HUT";
 
         // Print string values
-        System.out.printf("string 1: " + string1);
-        System.out.printf("string 2: " + string2);
+        System.out.println("string 1: " + string1);
+        System.out.println("string 2: " + string2);
 
         if (string1.equals(string2)){
             System.out.println("The strings are the same!\n");
@@ -129,9 +134,6 @@ public class BasicApp {
         // (import Random object at top of file)
 
         System.out.println("Lets generate some random numbers");
-
-        // Declare and init a new random object
-        Random random = new Random();
 
         // declare & assign variables with random numbers
         int randomNum1 = random.nextInt(); // generates random number with no bounds/limits
@@ -194,32 +196,25 @@ public class BasicApp {
         // Forced rounding using Math.ceil & Math.floor
         System.out.println("Force rounding using .ceil() & .floor()");
         System.out.println(roundNum3 + " rounds UP to " + Math.ceil(roundNum3));
-        System.out.println(roundNum2 + " rounds DOWN to " + Math.floor(roundNum2));
+        System.out.println(roundNum2 + " rounds DOWN to " + Math.floor(roundNum2) + "\n");
 
         // Get MAX & MIN between 2 values using .max & .min
         System.out.println("Get MAX & MIN values from a range using .max() & .min()");
         System.out.println("The MAX between 50 & 100 is " + Math.max(50, 100));
-        System.out.println("The MIN between 50 & 100 is " + Math.max(50, 100));
+        System.out.println("The MIN between 50 & 100 is " + Math.max(50, 100) + "\n");
 
 //====================================================================================
-// Enhanced switch statements --> better alternative to multiple else if statements
+// Enhanced switch statements --> better alternative to multiple else if statements (Java 14 feature)
 
         String month  = "January";
-        //String monthSeason = "Unknown";
 
+        System.out.println("The current month is " + month);
         switch(month) {
-            case "January" -> System.out.println("It is a WINTER month");
-            case "February" -> System.out.println("It is a WINTER month");
-            case "March" -> System.out.println("It is a SPRING month");
-            case "April" -> System.out.println("It is a SPRING month");
-            case "May" -> System.out.println("It is a SPRING month");
-            case "June" -> System.out.println("It is a SUMMER month");
-            case "July" -> System.out.println("It is a SUMMER month");
-            case "August" -> System.out.println("It is a SUMMER month");
-            case "September" -> System.out.println("It is a FALL month");
-            case "October" -> System.out.println("It is a FALL month");
-            case "November" -> System.out.println("It is a FALL month");
-            case "December" -> System.out.println("It is a WINTER month");
+            case "January", "February", "December" -> System.out.println("It is a WINTER month");
+            case "March", "April", "May" -> System.out.println("It is a SPRING month");
+            case "June", "July", "August" -> System.out.println("It is a SUMMER month");
+            case "September", "October", "November" -> System.out.println("It is a FALL month");
+            default -> System.out.println(month + " is not a VALID month");
         }
     }
 }
