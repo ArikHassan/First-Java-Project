@@ -18,8 +18,9 @@ some input and generates varying responses based on that input.
 - String comparison
 - Random Class (random value generation)
 - Math Class constants & methods
-- Loops (while, for)
+- Loops (while, for, for each)
 - Enhanced switch statement
+- Methods
 
 ### Important concepts learned
 - Using nextInt leaves a newline in the buffer. This causes the subsequent

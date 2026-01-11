@@ -260,9 +260,28 @@ public class BasicApp {
         }
         System.out.println("ForEach-loop exited\n");
 
-        //====================================================================================
-        // Methods in Java
+        // call greeting method
+        greeting(userName); // userName --> defined in beginning of program
 
+        // call getProduct method
+        int multiple1 = 10;
+        int multiple2 = 5;
+        int result = getProduct(multiple1, multiple2);
 
+        // display result
+        System.out.println(multiple1 + " * " + multiple2 + " = " + result);
     }
+
+    //====================================================================================
+    // Methods in Java
+    // format: (return type) (method identifier) (parameter list) {}
+    // java wants 'static' keyword because when this method is called within a static method like 'main'
+    static void greeting(String userName) {
+        System.out.printf("Hello %s\n\n", userName);
+    }
+
+    static int getProduct(int val1, int val2){
+        return val1 * val2;
+    }
+
 }
