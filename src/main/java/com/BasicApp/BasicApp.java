@@ -7,6 +7,7 @@ will be errors in the package statement on line 1.
 */
 
 // Scanner --> Scanner object built into Java to read user input
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 // LocalDate --> object to get the systems local date/time info
@@ -113,7 +114,8 @@ public class BasicApp {
 //====================================================================================
 // String comparison
         // Prompt for 2 strings to compare using string.equals()
-        System.out.println("Lets compare 2 strings with each other. Note: comparison is case sensitive.");
+        System.out.println("String comparison using String.equals(). Note: comparison is case sensitive.\n" +
+                           "----------------------------------------------------------------------------");
 
         // declare string variables
         String string1 = "Beach Hut";
@@ -133,7 +135,8 @@ public class BasicApp {
 // Generate random values using Java's random class
         // (import Random object at top of file)
 
-        System.out.println("Lets generate some random numbers");
+        System.out.println("Random value generation using Random object\n" +
+                           "-------------------------------------------");
 
         // declare & assign variables with random numbers
         int randomNum1 = random.nextInt(); // generates random number with no bounds/limits
@@ -156,7 +159,8 @@ public class BasicApp {
 //====================================================================================
 // Math constants + Methods
 
-        System.out.println("Mathematical constants & methods in Java:\n");
+        System.out.println("\nMathematical constants & methods in Java:\n" +
+                           "-----------------------------------------\n");
 
         // Built in CONST for pi
         System.out.println("The value of PI is " + Math.PI);
@@ -205,6 +209,8 @@ public class BasicApp {
 
 //====================================================================================
 // Enhanced switch statements --> better alternative to multiple else if statements (Java 14 feature)
+        System.out.println("Finding the season using Switch Statement\n" +
+                           "-----------------------------------------");
 
         String month  = "January";
 
@@ -216,5 +222,33 @@ public class BasicApp {
             case "September", "October", "November" -> System.out.println("It is a FALL month");
             default -> System.out.println(month + " is not a VALID month");
         }
+
+//====================================================================================
+// While-loop
+        System.out.println("While-loop:\n" +
+                           "----------");
+        int countDown = 5;
+
+        System.out.println("countDown = " + countDown);
+        System.out.println("print countDown while countDown > 0");
+
+        while (countDown > 0){
+            System.out.println(countDown--);
+        }
+        System.out.println("While-loop exited\n");
+
+//====================================================================================
+// For-loop
+        System.out.println("For-loop:\n" +
+                           "--------");
+        // Declare and initialize array
+        String[] fruits = {"apple", "banana", "pomegranate"};
+
+        System.out.println("Printing array elements using for-loop");
+        for (int idx = 0; idx < fruits.length; idx++){
+            System.out.println(fruits[idx]);
+        }
+
+        System.out.println("For-loop exited\n");
     }
 }
