@@ -19,8 +19,8 @@ public class BasicApp {
         // Header message
         System.out.println("Basic App - This is a beginner level Java Application.");
         System.out.println("------------------------------------------------------");
-//====================================================================================
-// Declare built-in objects to be used
+        //====================================================================================
+        // Declare built-in objects to be used
 
         // Create Random object to generate random values
         Random random = new Random();
@@ -28,8 +28,8 @@ public class BasicApp {
         // Create Scanner object to read user input
         Scanner scanner = new Scanner(System.in);
 
-//====================================================================================
-// User input using Scanner Class Obj
+        //====================================================================================
+        // User input using Scanner Class Obj
 
         // Prompt user for input (name)
         System.out.println("Please enter your Username / Full Name:");
@@ -44,8 +44,8 @@ public class BasicApp {
                 "documentation in the projects' README.md file to get in-depth details\n" +
                 "about this program.\n");
 
-//====================================================================================
-// Conditional Logic
+        //====================================================================================
+        // Conditional Logic
 
         //  Get users birth year to calculate current age
         System.out.println(userName + " please enter your birth year:");
@@ -76,8 +76,8 @@ public class BasicApp {
             System.out.println("You are currently " + (userAge - 1) + "/" + userAge + " years old\n");
         }
 
-//====================================================================================
-// Ternary Operator
+        //====================================================================================
+        // Ternary Operator
 
         // Print question with choice options
         System.out.println("True OR False?\n" +
@@ -93,8 +93,8 @@ public class BasicApp {
 
         System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System\n" : "Incorrect, there truly are 8 planets in our Solar System\n");
 
-//====================================================================================
-// Sum calculation
+        //====================================================================================
+        // Sum calculation
 
         // Ask user for 2 numbers to sum
         System.out.println("Let's calculate the sum of 2 numbers.");
@@ -111,8 +111,8 @@ public class BasicApp {
         // System.out.println("The sum of the numbers is " + num1 + num2); // must use parentheses for the addition expression
         System.out.println("The sum of the numbers is " + (num1 + num2) + "\n");
 
-//====================================================================================
-// String comparison
+        //====================================================================================
+        // String comparison
         // Prompt for 2 strings to compare using string.equals()
         System.out.println("String comparison using String.equals(). Note: comparison is case sensitive.\n" +
                            "----------------------------------------------------------------------------");
@@ -131,8 +131,8 @@ public class BasicApp {
             System.out.println("The strings are NOT the same!\n");
         }
 
-//====================================================================================
-// Generate random values using Java's random class
+        //====================================================================================
+        // Generate random values using Java's random class
         // (import Random object at top of file)
 
         System.out.println("Random value generation using Random object\n" +
@@ -156,8 +156,8 @@ public class BasicApp {
         System.out.print("\nHeads or tails? --> ");
         System.out.println(randomBool ? "Heads" : "Tails" + "\n");
 
-//====================================================================================
-// Math constants + Methods
+        //====================================================================================
+        // Math constants + Methods
 
         System.out.println("\nMathematical constants & methods in Java:\n" +
                            "-----------------------------------------\n");
@@ -207,8 +207,8 @@ public class BasicApp {
         System.out.println("The MAX between 50 & 100 is " + Math.max(50, 100));
         System.out.println("The MIN between 50 & 100 is " + Math.max(50, 100) + "\n");
 
-//====================================================================================
-// Enhanced switch statements --> better alternative to multiple else if statements (Java 14 feature)
+        //====================================================================================
+        // Enhanced switch statements --> better alternative to multiple else if statements (Java 14 feature)
         System.out.println("Finding the season using Switch Statement\n" +
                            "-----------------------------------------");
 
@@ -223,8 +223,11 @@ public class BasicApp {
             default -> System.out.println(month + " is not a VALID month");
         }
 
-//====================================================================================
-// While-loop
+        //====================================================================================
+        // Loops
+        System.out.println("Loops in Java: while, for, for each, do-while");
+        //====================================================================================
+        // While-loop
         System.out.println("While-loop:\n" +
                            "----------");
         int countDown = 5;
@@ -237,18 +240,29 @@ public class BasicApp {
         }
         System.out.println("While-loop exited\n");
 
-//====================================================================================
-// For-loop
+        //====================================================================================
+        // For-loop & For Each loop
         System.out.println("For-loop:\n" +
                            "--------");
         // Declare and initialize array
         String[] fruits = {"apple", "banana", "pomegranate"};
+        String[] names = {"Arik", "Andy", "Hassan", "Saleh"};
 
-        System.out.println("Printing array elements using for-loop");
+        System.out.println("Printing 'fruits' array elements using for-loop");
         for (int idx = 0; idx < fruits.length; idx++){
             System.out.println(fruits[idx]);
         }
-
         System.out.println("For-loop exited\n");
+
+        System.out.println("Printing 'names' array using forEach-loop");
+        for(String name : names) {
+            System.out.println("Name: " + name);
+        }
+        System.out.println("ForEach-loop exited\n");
+
+        //====================================================================================
+        // Methods in Java
+
+
     }
 }
