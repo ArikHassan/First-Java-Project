@@ -91,7 +91,7 @@ public class BasicApp {
         // print generated value
         System.out.println("Generated T/F Value: " + boolChoice);
 
-        System.out.println(boolChoice == true ? "Correct, there are 8 planets in our Solar System\n" : "Incorrect, there truly are 8 planets in our Solar System\n");
+        System.out.println(boolChoice ? "Correct, there are 8 planets in our Solar System\n" : "Incorrect, there truly are 8 planets in our Solar System\n");
 
         //====================================================================================
         // Sum calculation
@@ -269,7 +269,10 @@ public class BasicApp {
         int result = getProduct(multiple1, multiple2);
 
         // display result
-        System.out.println(multiple1 + " * " + multiple2 + " = " + result);
+        System.out.println(multiple1 + " * " + multiple2 + " = " + result + "\n");
+
+        // call greeting method overload
+        greeting(userName, birthYear);
     }
 
     //====================================================================================
@@ -282,6 +285,11 @@ public class BasicApp {
 
     static int getProduct(int val1, int val2){
         return val1 * val2;
+    }
+
+    // Method overload
+    static void greeting(String userName, int age){
+        System.out.printf("Hello %s, you were born in %d", userName, age);
     }
 
 }

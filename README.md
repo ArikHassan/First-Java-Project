@@ -21,7 +21,8 @@ some input and generates varying responses based on that input.
 - Loops (while, for, for each)
 - Enhanced switch statement
 - Methods
-
+-Overloaded methods
+- 
 ### Important concepts learned
 - Using nextInt leaves a newline in the buffer. This causes the subsequent
 nextLine call to consume the newline and nothing else resulting in an empty
@@ -34,6 +35,9 @@ returns a primitive int value
 is used to format output.
 
 - Strings can be compared using string.equals(str) method
+
+- To generate random values such as integers, doubles, or booleans...
+import and use Java's Random,
 
 ### Conclusion
 The purpose of this application is to get familiar with the fundamentals of
