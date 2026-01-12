@@ -280,15 +280,18 @@ public class BasicApp {
     // format: (return type) (method identifier) (parameter list) {}
     // java wants 'static' keyword because when this method is called within a static method like 'main'
     static void greeting(String userName) {
+        System.out.println("greeting(String)");
         System.out.printf("Hello %s\n\n", userName);
     }
 
     static int getProduct(int val1, int val2){
+        System.out.println("getProduct() called");
         return val1 * val2;
     }
 
     // Method overload
     static void greeting(String userName, int age){
+        System.out.println("greeting(String, int)");
         System.out.printf("Hello %s, you were born in %d", userName, age);
     }
 
