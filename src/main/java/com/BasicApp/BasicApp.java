@@ -289,10 +289,9 @@ public class BasicApp {
         return val1 * val2;
     }
 
-    // Method overload
+    // greeting method overload
     static void greeting(String userName, int age){
         System.out.println("greeting(String, int)");
         System.out.printf("Hello %s, you were born in %d", userName, age);
     }
-
 }

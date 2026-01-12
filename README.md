@@ -37,7 +37,7 @@ is used to format output.
 - Strings can be compared using string.equals(str) method
 
 - To generate random values such as integers, doubles, or booleans...
-import and use Java's Random,
+import and use Java's Random object
 
 ### Conclusion
 The purpose of this application is to get familiar with the fundamentals of
