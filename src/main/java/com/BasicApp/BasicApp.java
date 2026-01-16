@@ -260,6 +260,10 @@ public class BasicApp {
         }
         System.out.println("ForEach-loop exited\n");
 
+        //====================================================================================
+        // Method calls
+        System.out.println("Method Calls\n" +
+                           "------------");
         // call greeting method
         greeting(userName); // userName --> defined in beginning of program
 
@@ -273,6 +277,31 @@ public class BasicApp {
 
         // call greeting method overload
         greeting(userName, birthYear);
+
+
+        //====================================================================================
+        // Custom Class --> Car
+        System.out.println("Car class\n" +
+                           "---------");
+        // Create a car object using Car class
+        Car myCar = new Car();
+
+        // Print car attributes
+        System.out.println(myCar.make);
+        System.out.println(myCar.model);
+        System.out.println(myCar.price);
+
+        // Start the car
+        myCar.startCar();
+
+        // Stop the car
+        myCar.stopCar();
+
+        // Drive the car
+        myCar.drive();
+
+        // Brake the car
+        myCar.brake();
     }
 
     //====================================================================================
@@ -292,6 +321,6 @@ public class BasicApp {
     // greeting method overload
     static void greeting(String userName, int age){
         System.out.println("greeting(String, int)");
-        System.out.printf("Hello %s, you were born in %d", userName, age);
+        System.out.printf("Hello %s, you were born in %d\n\n", userName, age);
     }
 }
