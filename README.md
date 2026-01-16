@@ -24,6 +24,7 @@ some input and generates varying responses based on that input.
 -Overloaded methods
 - Custom classes
 - Constructors
+- Array of objects
 ### Important concepts learned
 - Using nextInt leaves a newline in the buffer. This causes the subsequent
 nextLine call to consume the newline and nothing else resulting in an empty

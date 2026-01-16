@@ -68,7 +68,7 @@ public class BasicApp {
         else if (birthYear < (currentYear - 130))
             System.out.println("Invalid birth year entered. Birth year can't be greater than 130 years ago.\nHuman's don't live that long!");
 
-        // Birth year is valid
+            // Birth year is valid
         else {
             // Calculate and print user's age
             // use modulo operator to get age
@@ -115,7 +115,7 @@ public class BasicApp {
         // String comparison
         // Prompt for 2 strings to compare using string.equals()
         System.out.println("String comparison using String.equals(). Note: comparison is case sensitive.\n" +
-                           "----------------------------------------------------------------------------");
+                "----------------------------------------------------------------------------");
 
         // declare string variables
         String string1 = "Beach Hut";
@@ -125,7 +125,7 @@ public class BasicApp {
         System.out.println("string 1: " + string1);
         System.out.println("string 2: " + string2);
 
-        if (string1.equals(string2)){
+        if (string1.equals(string2)) {
             System.out.println("The strings are the same!\n");
         } else {
             System.out.println("The strings are NOT the same!\n");
@@ -136,11 +136,11 @@ public class BasicApp {
         // (import Random object at top of file)
 
         System.out.println("Random value generation using Random object\n" +
-                           "-------------------------------------------");
+                "-------------------------------------------");
 
         // declare & assign variables with random numbers
         int randomNum1 = random.nextInt(); // generates random number with no bounds/limits
-        int randomNum2 = random.nextInt(10,101); // random number BETWEEN param1(inclusive) and param2(exclusive) param1 >= && < param2
+        int randomNum2 = random.nextInt(10, 101); // random number BETWEEN param1(inclusive) and param2(exclusive) param1 >= && < param2
 
         // try with type double, using nextDouble()
         double randomNum3 = random.nextDouble(1, 1001);
@@ -160,7 +160,7 @@ public class BasicApp {
         // Math constants + Methods
 
         System.out.println("\nMathematical constants & methods in Java:\n" +
-                           "-----------------------------------------\n");
+                "-----------------------------------------\n");
 
         // Built in CONST for pi
         System.out.println("The value of PI is " + Math.PI);
@@ -210,12 +210,12 @@ public class BasicApp {
         //====================================================================================
         // Enhanced switch statements --> better alternative to multiple else if statements (Java 14 feature)
         System.out.println("Finding the season using Switch Statement\n" +
-                           "-----------------------------------------");
+                "-----------------------------------------");
 
-        String month  = "January";
+        String month = "January";
 
         System.out.println("The current month is " + month);
-        switch(month) {
+        switch (month) {
             case "January", "February", "December" -> System.out.println("It is a WINTER month");
             case "March", "April", "May" -> System.out.println("It is a SPRING month");
             case "June", "July", "August" -> System.out.println("It is a SUMMER month");
@@ -229,13 +229,13 @@ public class BasicApp {
         //====================================================================================
         // While-loop
         System.out.println("While-loop:\n" +
-                           "----------");
+                "----------");
         int countDown = 5;
 
         System.out.println("countDown = " + countDown);
         System.out.println("print countDown while countDown > 0");
 
-        while (countDown > 0){
+        while (countDown > 0) {
             System.out.println(countDown--);
         }
         System.out.println("While-loop exited\n");
@@ -243,19 +243,19 @@ public class BasicApp {
         //====================================================================================
         // For-loop & For Each loop
         System.out.println("For-loop:\n" +
-                           "--------");
+                "--------");
         // Declare and initialize array
         String[] fruits = {"apple", "banana", "pomegranate"};
         String[] names = {"Arik", "Andy", "Hassan", "Saleh"};
 
         System.out.println("Printing 'fruits' array elements using for-loop");
-        for (int idx = 0; idx < fruits.length; idx++){
+        for (int idx = 0; idx < fruits.length; idx++) {
             System.out.println(fruits[idx]);
         }
         System.out.println("For-loop exited\n");
 
         System.out.println("Printing 'names' array using forEach-loop");
-        for(String name : names) {
+        for (String name : names) {
             System.out.println("Name: " + name);
         }
         System.out.println("ForEach-loop exited\n");
@@ -263,7 +263,7 @@ public class BasicApp {
         //====================================================================================
         // Method calls
         System.out.println("Method Calls\n" +
-                           "------------");
+                "------------");
         // call greeting method
         greeting(userName); // userName --> defined in beginning of program
 
@@ -282,7 +282,7 @@ public class BasicApp {
         //====================================================================================
         // Custom Class --> Car
         System.out.println("Car class\n" +
-                           "---------");
+                "---------");
         // Create a car object using Car class
         Car myCar = new Car();
 
@@ -307,14 +307,37 @@ public class BasicApp {
         //====================================================================================
         // Custom Class --> Student
         System.out.println("Student class\n" +
-                           "-------------");
-        // Create 2 new students
+                "-------------");
+        // Create 2 new students (calls 3 param constructor)
         Student student1 = new Student("John", 17, 3.0);
         Student student2 = new Student("Annie", 18, 4.0);
+
+        // Create 1 new student (calls 1 param constructor)
+        Student student3 = new Student("Albert");
+
+        // Create student with no arguments
+        Student student4 = new Student();
 
         // Call member method for student class
         student1.displayStudent();
         student2.displayStudent();
+        student3.displayStudent();
+
+        //====================================================================================
+        // Array of objects
+
+        // create an array of student objects
+        Student[] studentArr = {student1, student2, student3, student4};
+
+        // Alternative way to create array and specify size
+        // Student[] studentArr = new Student[5];
+
+        // loop through the student array using forEach loop
+        System.out.println("Student list:");
+        for (Student student : studentArr){
+            student.displayName();
+        }
+
 
     }
 
