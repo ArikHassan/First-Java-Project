@@ -302,6 +302,20 @@ public class BasicApp {
 
         // Brake the car
         myCar.brake();
+        System.out.println();
+
+        //====================================================================================
+        // Custom Class --> Student
+        System.out.println("Student class\n" +
+                           "-------------");
+        // Create 2 new students
+        Student student1 = new Student("John", 17, 3.0);
+        Student student2 = new Student("Annie", 18, 4.0);
+
+        // Call member method for student class
+        student1.displayStudent();
+        student2.displayStudent();
+
     }
 
     //====================================================================================

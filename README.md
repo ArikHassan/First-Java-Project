@@ -23,6 +23,7 @@ some input and generates varying responses based on that input.
 - Methods
 -Overloaded methods
 - Custom classes
+- Constructors
 ### Important concepts learned
 - Using nextInt leaves a newline in the buffer. This causes the subsequent
 nextLine call to consume the newline and nothing else resulting in an empty
