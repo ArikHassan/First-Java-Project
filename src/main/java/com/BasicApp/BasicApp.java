@@ -324,7 +324,7 @@ public class BasicApp {
         student3.displayStudent();
 
         //====================================================================================
-        // Array of objects
+        // Array of  student objects
 
         // create an array of student objects
         Student[] studentArr = {student1, student2, student3, student4};
@@ -337,6 +337,19 @@ public class BasicApp {
         for (Student student : studentArr){
             student.displayName();
         }
+
+        //====================================================================================
+        // Friend class
+        // -uses static numOfFriends attribute to keep track of friend count
+
+        System.out.println("Friend class\n" +
+                           "------------");
+        Friend friend1 = new Friend("Bob");
+        Friend friend2 = new Friend("Tom");
+        Friend friend3 = new Friend("Alice");
+
+//      System.out.println("Number of friends: " + friend1.numOfFriends); // uses a specific object to access static var
+        System.out.println("Number of friends: " + Friend.numOfFriends);
 
 
     }
