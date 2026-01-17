@@ -337,6 +337,7 @@ public class BasicApp {
         for (Student student : studentArr){
             student.displayName();
         }
+        System.out.println();
 
         //====================================================================================
         // Friend class
@@ -349,7 +350,27 @@ public class BasicApp {
         Friend friend3 = new Friend("Alice");
 
 //      System.out.println("Number of friends: " + friend1.numOfFriends); // uses a specific object to access static var
-        System.out.println("Number of friends: " + Friend.numOfFriends);
+        System.out.println("Number of friends: " + Friend.numOfFriends);    // using class name for static attribute is better
+
+        Friend.showFriends(); // no need to create obj first for calling static methods (i.e showFriends())
+        System.out.println();
+
+        //====================================================================================
+        // Animal, Cat, & Dog class - demonstrating inheritance
+        System.out.println("Animal, Cat, & Dog class - demonstrating inheritance\n" +
+                           "----------------------------------------------------");
+        // create sub-class objects
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+
+        // calling parent class method on subclass objects
+        dog.eat();
+        cat.eat();
+        System.out.println();
+
+        // calling methods of each sub-class
+        dog.speak();
+        cat.speak();
 
 
     }

@@ -10,8 +10,14 @@ public class Friend {
               used for utility methods or shared resources
     */
 
+    // constructor
     Friend(String name){
         this.name = name;
         numOfFriends++;
+    }
+
+    // static method
+    static void showFriends(){
+        System.out.println("You have " + numOfFriends + " friends"); // no need for 'this' since attribute is static
     }
 }
